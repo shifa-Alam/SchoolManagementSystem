@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,13 +11,14 @@ namespace StudentAttendanceManagement.Controllers
     {
         // GET: api/<StudentAttendanceController>
         [HttpGet]
-        public IEnumerable<StudentAttendanceDetailsModel> Get()
+        [Route("GetStudentAttendance")]
+        public IEnumerable<StudentAttendanceDetailsModel> GetStudentAttendance()
         {
             var stdn1 = new StudentAttendanceDetailsModel
             {
                 StudentID = 1,
                 StudentName = "Raju",
-                AttendencePercentage = 80,
+                AttendencePercentage = 80,  
 
             };
             var stdn2 = new StudentAttendanceDetailsModel

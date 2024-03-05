@@ -10,7 +10,8 @@ namespace StudentAdmissionManagement.Controllers
     {
         // GET: api/<StudentAdmissionController>
         [HttpGet]
-        public IEnumerable<StudentAdmissionDetailsModel> Get()
+        [Route("GetStudentAdmissionDetail")]
+        public IEnumerable<StudentAdmissionDetailsModel> GetStudentAdmissionDetail()
         {
 
             var stdn1 = new StudentAdmissionDetailsModel
@@ -22,7 +23,7 @@ namespace StudentAdmissionManagement.Controllers
             };
             var stdn2 = new StudentAdmissionDetailsModel
             {
-                StudentID = 1,
+                StudentID = 2,
                 StudentName = "shahin",
                 StudentClass = "IX",
                 DateofJoining = DateTime.Now,
